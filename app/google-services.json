@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "624968424648",
+    "firebase_url": "https://test-24669.firebaseio.com",
+    "project_id": "test-24669",
+    "storage_bucket": "test-24669.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624968424648:android:08d5c5ea1ed92b829a99fd",
+        "android_client_info": {
+          "package_name": "emanuelkrowegoran.ternakode"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "624968424648-8fkj2mur3ip09v10lduimhjlncu46bof.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "emanuelkrowegoran.ternakode",
+            "certificate_hash": "49a472965fdfefd9e01d6b5382b3fc5e37714859"
+          }
+        },
+        {
+          "client_id": "624968424648-lq9umd766matcg3h5p46np4rnkntnpqm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBV6NcdUXe7z5PMEvnk-vDnw3sIm-WlJik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "624968424648-lq9umd766matcg3h5p46np4rnkntnpqm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,22 @@
+<resources>
+    <string name="title_activity_login">TAKA Express</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GO</string>
+
+    <string name="slide_1_title">INFORMASI</string>
+    <string name="slide_1_desc">Menlihat Informasi Jadwal,kapasitas dan kapal feri</string>
+
+    <string name="slide_2_title">PEMESANAN TIKET</string>
+    <string name="slide_2_desc">Melakukan Pemesanan atau boking tiket kapal feri</string>
+
+    <string name="slide_3_title">RIWAYAT BOKING</string>
+    <string name="slide_3_desc">Riwayat Boking untuk menlihat riwayat Pemesanan dan melakukan pembatalan tiket  </string>
+
+    <string name="slide_4_title">PEMBAYARAN</string>
+    <string name="slide_4_desc">Melakukan Pembayaran tiket yang sudah dipesan</string>
+
+
+
+</resources>
+
