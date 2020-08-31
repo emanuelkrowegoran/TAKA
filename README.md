@@ -1,0 +1,2 @@
+# TAKA
+SKRIPSI
