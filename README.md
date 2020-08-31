@@ -1,3 +1,3 @@
 # TAKA
 SKRIPSI_165410097_Emanuel Krowe Goran
-![ScreenShot](https://{https://postimg.cc/gallery/NYw9Hv5})
+![ScreenShot](https://{[url=https://postimg.cc/FkFQWWVJ][img]https://i.postimg.cc/FkFQWWVJ/1.png[/img][/url]})
