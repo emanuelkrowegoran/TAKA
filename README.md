@@ -1,6 +1,5 @@
 # TAKA
-Emanuel Krowe Goran_TAKA Express
-Taka Express merupakan aplikasi pemesanan tiket kapal feri berbasis android dengan rute Nunukan, indonesia menuju Tawau, malaysia maupun sebaliknya. Item menu yang ada di aplikasi ini yaitu informasi,pemesanan, E-Tiket dan pembayaran.
+Emanuel Krowe Goran_Taka Express merupakan aplikasi pemesanan tiket kapal feri berbasis android dengan rute Nunukan, indonesia menuju Tawau, malaysia maupun sebaliknya. Item menu yang ada di aplikasi ini yaitu informasi,pemesanan, E-Tiket dan pembayaran.
 <div align="center">
     <img src="/screenshots/1.png" width="200px"</img> 
     <img src="/screenshots/2.png" width="200px"</img> 
