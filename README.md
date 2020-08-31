@@ -1,5 +1,5 @@
 # TAKA
-SKRIPSI_165410097_Emanuel Krowe Goran
+Emanuel Krowe Goran_TAKA Express
 <div align="center">
     <img src="/screenshots/1.png" width="200px"</img> 
     <img src="/screenshots/2.png" width="200px"</img> 
