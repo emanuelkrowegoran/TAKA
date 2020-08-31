@@ -29,6 +29,7 @@ public class AdapterBokingRecyclerView extends RecyclerView.Adapter<AdapterBokin
 
 
 
+
     /**
      * Inisiasi data dan variabel yang akan digunakan
      */
@@ -93,10 +94,8 @@ public class AdapterBokingRecyclerView extends RecyclerView.Adapter<AdapterBokin
         final String dewasa = daftarBarang.get(position).getDataDewasa();
         final String bayi = daftarBarang.get(position).getDataBayi();
         final String tanggal = daftarBarang.get(position).getDataTanggal();
-        final String kapal = daftarBarang.get(position).getDataKapal();
         final String total = daftarBarang.get(position).getDataTotal();
-
-
+        final String pasport = daftarBarang.get(position).getDataPasport();
 
 
 
@@ -130,7 +129,7 @@ public class AdapterBokingRecyclerView extends RecyclerView.Adapter<AdapterBokin
         holder.tvTotal.setText("Total Harga :");
         holder.tvTanggal.setText(tanggal);
         holder.tvTotal.setText("Total Harga :   " + total );
-        holder.tvId.setText(kapal );
+        holder.tvId.setText("ID : " + pasport);
  }
 
 

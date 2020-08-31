@@ -2,24 +2,37 @@ package emanuelkrowegoran.ternakode.Bayar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.concurrent.TimeUnit;
 
 import emanuelkrowegoran.ternakode.Menu.HomeDashboard;
 import emanuelkrowegoran.ternakode.R;
 
 public class activityBayar extends AppCompatActivity {
     LinearLayout bt_bca, bt_bri, bt_mandiri, kk_mastercard, kk_visa, ib_bca, s_indomaret, s_alfamart;
-    String traveller,bank_nama,payment_code,product_schedule_id,coupon_code,pay_total,firstname,lastname,cust_id,product_id,product_price,product_name,product_model,product_qty,product_total,telephone,email,traveller_more,token;
+    String traveller, bank_nama, payment_code, product_schedule_id, coupon_code, pay_total, firstname, lastname, cust_id, product_id, product_price, product_name, product_model, product_qty, product_total, telephone, email, traveller_more, token;
+
+    private TextView Waktu;
+    private TimerClass timerClass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bayar);
+        Waktu = findViewById(R.id.timer);
+        //Set Waktu selama 30 menit = 60000 * 3 millis dengan interval 1 detik = 1000 millis
+        timerClass = new TimerClass(60000 * 30, 1000);
+        timerClass.start();
+
 
         ImageButton btnback = (ImageButton) findViewById(R.id.trans_btn_back_pay);
 
@@ -109,16 +122,59 @@ public class activityBayar extends AppCompatActivity {
             }
         });
 
-        bt_bri.setOnClickListener(new View.OnClickListener() {
-
+        bt_bca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent intent = new Intent(activityBayar.this, Request_payment.class);
+                Intent intent = new Intent(activityBayar.this, bni.class);
                 startActivity(intent);
             }
         });
+        bt_bri.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent intent = new Intent(activityBayar.this, bri.class);
+                startActivity(intent);
+            }
+        });
+        bt_mandiri.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent intent = new Intent(activityBayar.this, mandiri.class);
+                startActivity(intent);
+            }
+        });
+    }
+        //Membuat InnerClass untuk konfigurasi Countdown Time
+        public class TimerClass extends CountDownTimer {
 
-    }}
+            TimerClass(long millisInFuture, long countDownInterval) {
+                super(millisInFuture, countDownInterval);
+            }
 
+            //Method ini berjalan saat waktu/timer berubah
+            @Override
+            public void onTick(long millisUntilFinished) {
+                //Kenfigurasi Format Waktu yang digunakan
+                String waktu = String.format("%02d:%02d:%02d",
+                        TimeUnit.MILLISECONDS.toHours(millisUntilFinished),
+                        TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) -
+                                TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millisUntilFinished)),
+                        TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) -
+                                TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)));
+
+                //Menampilkannya pada TexView
+                Waktu.setText(waktu);
+            }
+
+            @Override
+            public void onFinish() {
+                ///Berjalan saat waktu telah selesai atau berhenti
+                Toast.makeText(activityBayar.this, "Waktu Pembayaran Telah Berakhir Harap Konfirmasi Ulang", Toast.LENGTH_LONG).show();
+                finish();
+            }
+        }
+    }
 

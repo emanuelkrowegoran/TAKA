@@ -3,6 +3,8 @@ package emanuelkrowegoran.ternakode.RiwayatBoking;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import emanuelkrowegoran.ternakode.Bayar.activityBayar;
 import emanuelkrowegoran.ternakode.Pesan.Boking;
 import emanuelkrowegoran.ternakode.R;
 
@@ -33,6 +36,7 @@ public class RiwayatBoking extends AppCompatActivity {
     private ArrayList<Boking> daftarBoking;
     int hargaDewasa, hargaAnak;
     int hargaTotalDewasa, hargaTotalAnak, hargaTotal;
+    Button bayar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,7 +55,16 @@ public class RiwayatBoking extends AppCompatActivity {
         rvView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         rvView.setLayoutManager(layoutManager);
+        bayar = findViewById(R.id.btn_bayar);
 
+
+
+       bayar.setOnClickListener(new View.OnClickListener() {
+          public void onClick(View view) {
+        Intent intent = new Intent(RiwayatBoking.this, activityBayar.class);
+        startActivity(intent);
+     }
+    });
         /**
          * Inisialisasi dan mengambil Firebase Database Reference
          */

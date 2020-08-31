@@ -24,11 +24,14 @@
         <activity android:name=".Info.InfoActivity" />
         <activity android:name=".MenuProfil.profilAPK" />
         <activity android:name=".Pesan.Pemesanan" />
-        <activity android:name=".RiwayatBoking.RiwayatBoking"/>
-        <activity android:name=".Pesan.FirebaseDBReadActivity"/>
-        <activity android:name=".Pesan.FirebaseDBReadSingleActivity"/>
-        <activity android:name=".Pesan.FirebaseDBCreateActivity"/>
-        <activity android:name=".Bayar.activityBayar"/>
+        <activity android:name=".RiwayatBoking.RiwayatBoking" />
+        <activity android:name=".Pesan.FirebaseDBReadActivity" />
+        <activity android:name=".Pesan.FirebaseDBReadSingleActivity" />
+        <activity android:name=".Pesan.FirebaseDBCreateActivity" />
+        <activity android:name=".Bayar.activityBayar" />
+        <activity android:name=".Bayar.bni"></activity>
+        <activity android:name=".Bayar.bri"></activity>
+        <activity android:name=".Bayar.mandiri"></activity>
     </application>
 
 </manifest>

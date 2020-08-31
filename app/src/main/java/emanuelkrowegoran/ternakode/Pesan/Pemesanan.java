@@ -34,7 +34,7 @@ public class Pemesanan extends AppCompatActivity {
     Spinner idbayi, idkapal;
     Button buttonAdd, tombol;
     private EditText total_harga;
-    private EditText etNoHP;
+    private EditText idpasport;
     public String sAsal, sTujuan, sDewasa, sBayi, sTanggal, sKapal;
     int hargaDewasa, hargaAnak;
     int hargaTotalDewasa, hargaTotalAnak, hargaTotal;
@@ -74,9 +74,9 @@ public class Pemesanan extends AppCompatActivity {
 
         final String[] idAsal = {"Nunukan, Indonesia", "Tawau, Malaysia"};
         final String[] idTujuan = {"Nunukan, Indonesia", "Tawau, Malaysia"};
-        final String[] idDewasa = {"1 orang/Dewasa", "2 orang/Dewasa"};
-        final String[] idBayi = {"Tidak Ada", "1 Bayi"};
-        final String[] idKapal = {"MV Tawindo (Jam 07:00 AM)", "Labuan Express Lima (Jam 08:30)", "MV Mid Express (Jam 10:00 AM)", "MV Tawindo (Jam 07:00 AM)" , "Malindo Express (Jam 12:00 PM)" , "Tawau Express (Jam 02:30 PM)" , "Sin'On Express (Jam 03:00 PM)"};
+        final String[] idDewasa = {"1 orang/Dewasa(Rp 200.000)", "2 orang/Dewasa (Rp 400.000)"};
+        final String[] idBayi = {"Tidak Ada", "1 Bayi (Rp 70.000)"};
+        final String[] idKapal = {"MV Tawindo (Jam 07:00 AM)", "Labuan Express Lima (Jam 08:30)", "MV Mid Express (Jam 10:00 AM)", "Malindo Express (Jam 12:00 PM)" , "Tawau Express (Jam 02:30 PM)" , "Sin'On Express (Jam 03:00 PM)"};
 
         //getting views
         idasal = (Spinner) findViewById(R.id.idAsal);
@@ -84,6 +84,7 @@ public class Pemesanan extends AppCompatActivity {
         iddewasa = (Spinner) findViewById(R.id.idDewasa);
         idbayi = (Spinner) findViewById(R.id.idBayi);
         idkapal = (Spinner) findViewById(R.id.idKapal);
+        idpasport = (EditText) findViewById(R.id.et_pasport);
         idtanggal = findViewById(R.id.tanggal_berangkat);
         gg = findViewById(R.id.total_harga);
 
@@ -248,16 +249,16 @@ public class Pemesanan extends AppCompatActivity {
      * */
     public void perhitunganHarga() {
 
-    if (sDewasa.equalsIgnoreCase("1 orang/Dewasa") && sBayi.equalsIgnoreCase("Tidak Ada")) {
+    if (sDewasa.equalsIgnoreCase("1 orang/Dewasa(Rp 200.000)") && sBayi.equalsIgnoreCase("Tidak Ada")) {
         total = "   Rp 200.000";
        gg.setText(total);
-    } else if (sDewasa.equalsIgnoreCase("1 orang/Dewasa") && sBayi.equalsIgnoreCase("1 Bayi")) {
+    } else if (sDewasa.equalsIgnoreCase("1 orang/Dewasa(Rp 200.000)") && sBayi.equalsIgnoreCase("1 Bayi (Rp 70.000)")) {
         total = "   Rp 270.000";
         gg.setText(total);
-    } else if (sDewasa.equalsIgnoreCase("2 orang/Dewasa") && sBayi.equalsIgnoreCase("Tidak Ada")) {
+    } else if (sDewasa.equalsIgnoreCase("2 orang/Dewasa (Rp 400.000)") && sBayi.equalsIgnoreCase("Tidak Ada")) {
         total = "   Rp 400.000";
         gg.setText(total);
-    } else if (sDewasa.equalsIgnoreCase("2 orang/Dewasa") && sBayi.equalsIgnoreCase("1 Bayi")) {
+    } else if (sDewasa.equalsIgnoreCase("2 orang/Dewasa (Rp 400.000)") && sBayi.equalsIgnoreCase("1 Bayi (Rp 70.000)")) {
         total = "   Rp 470.000";
         gg.setText(total);
     }
@@ -275,20 +276,8 @@ public class Pemesanan extends AppCompatActivity {
         String bayi = idbayi.getSelectedItem().toString();
         String kapal = idkapal.getSelectedItem().toString();
         String tanggal = idtanggal.getText().toString().trim();
+        String pasport = idpasport.getText().toString().trim();
         String TotalHarga =  gg.getText().toString().trim();
-
-
-
-
-
-
-
-
-       
-
-
-
-
 
 
         //checking if the value is provided
@@ -300,6 +289,9 @@ public class Pemesanan extends AppCompatActivity {
             gg.setError("Cek Harga Dulu");
             Toast.makeText(Pemesanan.this, "Silahkan Cek Harga dulu !", Toast.LENGTH_LONG).show();
 
+        }else if (idpasport.getText().toString().length()==0){
+            idpasport.setError("Silahkan isi");
+            Toast.makeText(Pemesanan.this, "Silahkan isi dulu !", Toast.LENGTH_LONG).show();
 
         }else if ((sAsal.equalsIgnoreCase("Nunukan, Indonesia") && sTujuan.equalsIgnoreCase("Nunukan, Indonesia"))
                 || (sAsal.equalsIgnoreCase("Tawau, Malaysia") && sTujuan.equalsIgnoreCase("Tawau, Malaysia"))) {
@@ -314,7 +306,7 @@ public class Pemesanan extends AppCompatActivity {
             String id = databaseBokings.push().getKey();
 
             //creating an Artist Object
-            Boking boking = new Boking(asal, tujuan, dewasa, bayi, tanggal, TotalHarga, kapal);
+            Boking boking = new Boking(asal, tujuan, dewasa, bayi, tanggal, TotalHarga, kapal, pasport);
 
             //Saving the Artist
             databaseBokings.child(id).setValue(boking);

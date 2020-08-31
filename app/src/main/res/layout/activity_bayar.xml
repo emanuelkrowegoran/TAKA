@@ -139,14 +139,15 @@
                             android:layout_height="match_parent"
                             android:text="Bank Transfer"
                             android:textSize="16dp"
-                            android:textColor="@color/gray"/>
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_weight="1"
                             android:layout_height="match_parent"
                             android:text="Bank Mandiri, Bank BCA, Bank BRI"
-                            android:textSize="12dp"/>
+                            android:textSize="12dp"
+                            android:textColor="@color/black"/>
 
                     </LinearLayout>
 
@@ -203,7 +204,7 @@
                             android:text="Bank Mandiri"
                             android:gravity="center"
                             android:textSize="14dp"
-                            android:textColor="@color/gray"/>
+                            android:textColor="@color/black"/>
 
                         <ImageView
                             android:layout_width="50dp"
@@ -242,7 +243,7 @@
                             android:text="Bank BNI"
                             android:gravity="center"
                             android:textSize="14dp"
-                            android:textColor="@color/gray"/>
+                            android:textColor="@color/black"/>
 
                         <ImageView
                             android:layout_width="50dp"
@@ -281,7 +282,7 @@
                             android:text="Bank BRI"
                             android:gravity="center"
                             android:textSize="14dp"
-                            android:textColor="@color/gray"/>
+                            android:textColor="@color/black"/>
 
                         <ImageView
                             android:layout_width="50dp"
@@ -334,7 +335,7 @@
                                 android:layout_height="match_parent"
                                 android:text="Kartu Kredit"
                                 android:textSize="16dp"
-                                android:textColor="@color/gray"/>
+                                android:textColor="@color/black"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -465,302 +466,26 @@
 
                 </LinearLayout>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:background="?android:attr/listDivider" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal"
-                    android:id="@+id/collapse_ib"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:layout_height="50dp">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent"
-                        android:padding="5dp"
-                        android:src="@drawable/bcaklikpay"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="Internet Banking"
-                                android:textSize="16dp"
-                                android:textColor="@color/gray"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_weight="1"
-                                android:layout_height="match_parent"
-                                android:text=" (belum tersedia)"
-                                android:gravity="center"
-                                android:textSize="10dp"/>
-
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_weight="1"
-                            android:layout_height="match_parent"
-                            android:text="BCA KlikPay"
-                            android:textSize="12dp"/>
-
-                    </LinearLayout>
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/ic_arrow_right"
-                        android:padding="13dp"/>
-
-                    <ImageView
-                        android:id="@+id/collapse_ib_on"
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/ic_arrow_down"
-                        android:visibility="gone"
-                        android:padding="13dp"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/expand_ib"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone"
-                    android:orientation="vertical">
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="?android:attr/listDivider" />
-
-                    <LinearLayout
-                        android:id="@+id/payment_ib_bca"
-                        android:layout_width="match_parent"
-                        android:orientation="horizontal"
-                        android:focusable="true"
-                        android:clickable="true"
-                        android:foreground="?attr/selectableItemBackground"
-                        android:layout_height="50dp">
-
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:padding="3dp"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginRight="5dp"
-                            android:src="@drawable/bcaklikpay"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_weight="1"
-                            android:layout_height="match_parent"
-                            android:text="BCA KlikPay"
-                            android:gravity="center"
-                            android:textSize="14dp"
-                            android:textColor="@color/gray"/>
-
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/ic_arrow_right"
-                            android:padding="13dp"/>
-
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="0.5dp"
-                        android:background="?android:attr/listDivider" />
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:background="?android:attr/listDivider" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal"
-                    android:id="@+id/collapse_s"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:layout_height="50dp">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent"
-                        android:padding="5dp"
-                        android:src="@drawable/swalayan"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="Swalayan"
-                                android:textSize="16dp"
-                                android:textColor="@color/gray"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_weight="1"
-                                android:layout_height="match_parent"
-                                android:text=" (belum tersedia)"
-                                android:gravity="center"
-                                android:textSize="10dp"/>
-
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_weight="1"
-                            android:layout_height="match_parent"
-                            android:text="Indomaret, Alfamart"
-                            android:textSize="12dp"/>
-
-                    </LinearLayout>
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/ic_arrow_right"
-                        android:padding="13dp"/>
-
-                    <ImageView
-                        android:id="@+id/collapse_s_on"
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/ic_arrow_down"
-                        android:visibility="gone"
-                        android:padding="13dp"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/expand_s"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone"
-                    android:orientation="vertical">
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="?android:attr/listDivider" />
-
-                    <LinearLayout
-                        android:id="@+id/payment_s_indomaret"
-                        android:layout_width="match_parent"
-                        android:orientation="horizontal"
-                        android:focusable="true"
-                        android:clickable="true"
-                        android:foreground="?attr/selectableItemBackground"
-                        android:layout_height="50dp">
-
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:padding="3dp"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginRight="5dp"
-                            android:src="@drawable/indomart"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_weight="1"
-                            android:layout_height="match_parent"
-                            android:text="Indomaret"
-                            android:gravity="center"
-                            android:textSize="14dp"
-                            android:textColor="@color/gray"/>
-
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/ic_arrow_right"
-                            android:padding="13dp"/>
-
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="0.5dp"
-                        android:background="?android:attr/listDivider" />
-
-                    <LinearLayout
-                        android:id="@+id/payment_s_alfamart"
-                        android:layout_width="match_parent"
-                        android:orientation="horizontal"
-                        android:focusable="true"
-                        android:clickable="true"
-                        android:foreground="?attr/selectableItemBackground"
-                        android:layout_height="50dp">
-
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:padding="3dp"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginRight="5dp"
-                            android:src="@drawable/alfamart"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_weight="1"
-                            android:layout_height="match_parent"
-                            android:text="Alfamart"
-                            android:gravity="center"
-                            android:textSize="14dp"
-                            android:textColor="@color/gray"/>
-
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/ic_arrow_right"
-                            android:padding="13dp"/>
-
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="0.5dp"
-                        android:background="?android:attr/listDivider" />
-
-                </LinearLayout>
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_marginTop="130dp"
+            android:text="Waktu Pembayaran"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:gravity="center"
+            android:text="00:30:00"
+            android:textSize="19sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 </LinearLayout>

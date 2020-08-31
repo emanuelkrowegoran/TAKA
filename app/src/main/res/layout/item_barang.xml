@@ -100,15 +100,12 @@
                     tools:text="Rp. 400.000" />
 
 
-
-
-
             </LinearLayout>
-
         </LinearLayout>
 
 
     </RelativeLayout>
+
 
 </androidx.cardview.widget.CardView>
 

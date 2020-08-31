@@ -22,7 +22,7 @@ public class FirebaseDBReadSingleActivity extends AppCompatActivity {
     private EditText etNama;
     private EditText etBayi;
     private EditText etNoHP;
-    private EditText etNama2;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,6 +31,7 @@ public class FirebaseDBReadSingleActivity extends AppCompatActivity {
         etNama = (EditText) findViewById(R.id.et_namapenumpang);
         etBayi = (EditText) findViewById(R.id.et_bayi);
         etNoHP = (EditText) findViewById(R.id.et_nohp);
+
 
         btSubmit = (Button) findViewById(R.id.bt_submit);
 

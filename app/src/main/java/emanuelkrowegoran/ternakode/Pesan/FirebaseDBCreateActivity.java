@@ -35,6 +35,8 @@ public class FirebaseDBCreateActivity extends AppCompatActivity {
     private EditText etNama2;
     private EditText etBayi;
     private EditText etNoHP;
+    private EditText etEmail;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,6 +48,7 @@ public class FirebaseDBCreateActivity extends AppCompatActivity {
         etBayi = (EditText) findViewById(R.id.et_bayi);
         etNoHP = (EditText) findViewById(R.id.et_nohp);
         etNama2 = (EditText) findViewById(R.id.et_nama2);
+        etEmail = (EditText) findViewById(R.id.et_email);
         btSubmit = (Button) findViewById(R.id.bt_submit);
 
         // mengambil referensi ke Firebase Database
@@ -58,6 +61,7 @@ public class FirebaseDBCreateActivity extends AppCompatActivity {
             etBayi.setText(barang.getBayi());
             etNoHP.setText(barang.getNohp());
             etNama2.setText(barang.getnama2());
+            etEmail.setText(barang.getemail());
             btSubmit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -65,6 +69,8 @@ public class FirebaseDBCreateActivity extends AppCompatActivity {
                     barang.setBayi(etBayi.getText().toString());
                     barang.setnama2(etNama2.getText().toString());
                     barang.setNohp(etNoHP.getText().toString());
+                    barang.setemail(etEmail.getText().toString());
+
 
                     updateBarang(barang);
                 }
@@ -73,8 +79,8 @@ public class FirebaseDBCreateActivity extends AppCompatActivity {
             btSubmit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if(!isEmpty(etNama.getText().toString()) && !isEmpty(etNoHP.getText().toString()))
-                        submitBarang(new Boking(etNama.getText().toString(), etBayi.getText().toString(), etNoHP.getText().toString(), etNama2.getText().toString()));
+                    if(!isEmpty(etNama.getText().toString()) && !isEmpty(etNoHP.getText().toString())&& !isEmpty(etEmail.getText().toString()))
+                        submitBarang(new Boking(etNama.getText().toString(), etBayi.getText().toString(), etNoHP.getText().toString(), etNama2.getText().toString(), etEmail.getText().toString()));
                     else
                         Snackbar.make(findViewById(R.id.bt_submit), "Data tidak boleh kosong", Snackbar.LENGTH_LONG).show();
 
@@ -133,6 +139,7 @@ public class FirebaseDBCreateActivity extends AppCompatActivity {
                 etBayi.setText("");
                 etNoHP.setText("");
                 etNama2.setText("");
+                etEmail.setText("");
                 Snackbar.make(findViewById(R.id.bt_submit), "Data Berhasil diBoking", Snackbar.LENGTH_LONG).show();
                 Intent intent = new Intent(FirebaseDBCreateActivity.this, FirebaseDBReadActivity.class);
                 startActivity(intent);

@@ -16,6 +16,8 @@ public class Boking implements Serializable{
     private String bayi;
     private String nohp;
     private String DataTotal;
+    private String email;
+    private String DataPasport;
 
 
 
@@ -24,7 +26,7 @@ public class Boking implements Serializable{
         //this constructor is required
     }
 
-    public Boking(String DataAsal, String DataTujuan, String DataDewasa, String DataBayi, String DataTanggal, String DataTotal, String DataKapal) {
+    public Boking(String DataAsal, String DataTujuan, String DataDewasa, String DataBayi, String DataTanggal, String DataTotal, String DataKapal, String DataPasport) {
 
         this.DataAsal = DataAsal;
         this.DataTujuan = DataTujuan;
@@ -33,7 +35,7 @@ public class Boking implements Serializable{
         this.DataTanggal = DataTanggal;
         this.DataTotal = DataTotal;
         this.DataKapal = DataKapal;
-
+        this.DataPasport = DataPasport;
 
 
 
@@ -135,6 +137,20 @@ public class Boking implements Serializable{
         this.nama2 = nama2;
     }
 
+    public String getemail() {
+        return email;
+    }
+
+    public void setemail(String email) {
+        this.email = email;
+    }
+    public String getDataPasport() {
+        return DataPasport;
+    }
+
+    public void setDataPasport(String DataPasport) {
+        this.DataPasport = DataPasport;
+    }
 
 
     @Override
@@ -142,14 +158,16 @@ public class Boking implements Serializable{
         return " "+nama+"\n" +
                 " "+nama2+"\n" +
                 " "+bayi +"\n" +
+                " "+email +"\n" +
                 " "+nohp;
     }
 
-    public Boking(String nm, String byi, String hp, String nma){
+    public Boking(String nm, String byi, String hp, String nma, String em){
         nama = nm;
         nama2 = nma;
         bayi = byi;
         nohp = hp;
+        email = em;
     }
 }
 

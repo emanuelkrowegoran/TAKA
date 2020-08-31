@@ -56,17 +56,20 @@
                 android:background="@color/colorPrimary" />
 
 
+
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
 
 
+
                 <EditText
-                    android:id="@+id/et_namapenumpang"
+                    android:id="@+id/et_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nama Penumpang"
+                    android:hint="ID Email"
                     android:inputType="text" />
 
 
@@ -111,15 +114,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
+                <EditText
+                    android:id="@+id/et_namapenumpang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nama Penumpang 1"
+                    android:inputType="text" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
 
                 <EditText
                     android:id="@+id/et_nama2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nama Penumpang"
+                    android:hint="Nama Penumpang 2"
                     android:inputType="text" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
